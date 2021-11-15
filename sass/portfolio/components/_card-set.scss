@@ -1,16 +1,18 @@
-.main-list {
+.card-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  &__link {
+    height: 100%;
+    width: 100%;
+  }
 }
 
-.main-list > li {
-  margin-bottom: 50px;
-}
-
-.list {
+.card-list__item {
   width: 370px;
   height: 404px;
+  margin-bottom: 50px;
+
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus,
@@ -21,12 +23,12 @@
   }
 }
 
-.list-link {
-  height: 100%;
-  width: 100%;
+.card-set {
+  position: relative;
+  overflow: hidden;
 }
 
-.main-list-div {
+.card-text {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -36,18 +38,13 @@
   width: 100%;
   padding: 63px 24px;
   background: rgba(33, 150, 243, 0.9);
-  .list-link:hover &,
-  .list-link:focus & {
+  .card-list__link:hover &,
+  .card-list__link:focus & {
     transform: translateY(0);
   }
 }
 
-.main-list-text {
-  position: relative;
-  overflow: hidden;
-}
-
-.main-list-paragraph {
+.card-text__paragraph {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
@@ -55,21 +52,21 @@
   color: #ffffff;
 }
 
-.logo-text {
+.card-set-text {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
-}
-.logo-name {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: var(--main-text-color);
-  margin-bottom: 4px;
-}
-.logo-name-discribe {
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.03em;
-  color: var(--second-text-color);
+  &__name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--main-text-color);
+    margin-bottom: 4px;
+  }
+  &__discribe {
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
+  }
 }
